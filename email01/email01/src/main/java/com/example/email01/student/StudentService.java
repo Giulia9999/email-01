@@ -37,6 +37,7 @@ public class StudentService {
             message.setText(text);
             message.setReplyTo("test@example.com");
             message.setFrom("maxpower88999@gmail.com");
+            emailSender.send(message);
         } else {
             throw new IllegalArgumentException("Student not found with contact ID " + contactId);
         }
